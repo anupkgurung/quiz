@@ -14,3 +14,17 @@ export const getAllCategories = function (schema, request) {
     );
   }
 };
+
+export const getQuizCategory = function (schema, request) {
+  try {
+    return schema.quizzes.all()
+  } catch (error) {
+    return new Response(
+      500,
+      {},
+      {
+        error,
+      }
+    );
+  }
+};
