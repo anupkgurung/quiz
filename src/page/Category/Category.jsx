@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 import { LinkButton, QuizCard } from "../../component";
 
 const getCategories = async (setCategories) => {
-    const { data: { quizzes } } = await axios.get("api/category/quiz");
-    setCategories(quizzes)
+    try{
+        const { data: { quizzes } } = await axios.get("api/category/quiz");
+        setCategories(quizzes)
+    }catch({response}){
+        console.log(response);
+    }
 }
 
 
