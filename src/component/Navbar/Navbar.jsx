@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { LinkButton } from "../LinkButton/LinkButton"
+import { LinkButton } from "../../component"
 import "./navbar.css"
 
 export const Navbar = () => {

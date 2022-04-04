@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 import { QuizCard } from "../../component/QuizCard/QuizCard"
 
 const getCategories = async (setCategories) => {
-    const { data : {categories} } = await axios.get("api/category/");
-    setCategories(categories)
+    try{
+        const { data : {categories} } = await axios.get("api/category/");
+        setCategories(categories)
+    }catch({response}){
+        console.log(response)
+    }
 }
 export const Home = () => {
     const [categories, setCategories] = useState([]);    
@@ -15,7 +19,7 @@ export const Home = () => {
             {categories.length > 0 && categories.map(({id,cateoryName,description,image,path})=>
                 <QuizCard key={id}
                     id={id}
-                    cateoryName={""}
+                  
                     description={description}
                     caption={cateoryName}
                     image={image}
