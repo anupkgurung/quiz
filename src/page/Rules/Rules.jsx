@@ -1,5 +1,5 @@
 import { LinkButton } from "../../component";
-import "./rules.css";
+import "./Rules.css";
 
 const rules = [
     "Every category has 10 questions of multiple choice",
