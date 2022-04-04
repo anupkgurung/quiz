@@ -15,8 +15,8 @@ export const Rules = () => {
                 <div className="m-1 pd-2 rules-card">
                     <img src="https://raw.githubusercontent.com/anupkgurung/images/main/quizimg/rulespage.png" alt="rules" />
                     <ul className="ul-list-flex">
-                    {rules.map(item => (
-                        <li className="pd-2">{item}</li>
+                    {rules.map((item,idx) => (
+                        <li className="pd-2" key={idx}>{item}</li>
                     ))}
                     </ul>
                 </div>

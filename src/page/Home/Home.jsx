@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { QuizCard } from "../../component/QuizCard/QuizCard"
+import { QuizCard } from "../../component"
 
 const getCategories = async (setCategories) => {
     try{
@@ -19,7 +19,6 @@ export const Home = () => {
             {categories.length > 0 && categories.map(({id,cateoryName,description,image,path})=>
                 <QuizCard key={id}
                     id={id}
-                  
                     description={description}
                     caption={cateoryName}
                     image={image}

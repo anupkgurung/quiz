@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import { LinkButton } from "../../component"
-import "./navbar.css"
+import { Link } from "react-router-dom";
+import { LinkButton } from "../../component";
+import "./navbar.css";
 
 export const Navbar = () => {
     
