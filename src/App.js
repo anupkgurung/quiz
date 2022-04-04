@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route , Routes} from "react-router-dom";
-import { Home, Category } from "../src/page";
+import { Home, Category, Rules } from "../src/page";
 import { Navbar} from "../src/component"
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quiz-category" element={<Category />} />
+          <Route path="/rules" element={<Rules />} />
         </Routes>
     </div>
   );

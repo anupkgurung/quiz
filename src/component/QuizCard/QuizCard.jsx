@@ -5,7 +5,7 @@ export const QuizCard = ({ id, cateoryName, description, caption, image, path })
 
     return (
         <>
-            <div className="" id={id}>
+            <div id={id}>
                 <div className='container'>
                     <div>
                         <img className="responsive img-radius" src={image} alt="js" />
