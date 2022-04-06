@@ -28,3 +28,19 @@ export const getQuizCategory = function (schema, request) {
     );
   }
 };
+
+export const getCategoryHandler = function (schema, request) {
+  const categoryId = request.params.categoryId;
+  try {
+    const questionList  = schema.questions.all().models.filter(item=>item[categoryId]);
+    return new Response(200, {}, { questionList });
+  } catch (error) {
+    new Response(
+      500,
+      {},
+      {
+        error,
+      }
+    );
+  }
+};
