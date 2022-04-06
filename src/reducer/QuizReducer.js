@@ -17,7 +17,7 @@ export const QuizPageReducer = (state, {operation,payLoad}) => {
             return {
                 ...state,
                 categoryId : payLoad.categoryId,
-                currentQuestion : payLoad.currentQuestion++,
+                currentQuestion : payLoad.currentQuestion+1,
             }
         case "VALIDATE_ANSWER" :
             return {
