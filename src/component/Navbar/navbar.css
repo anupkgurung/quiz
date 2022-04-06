@@ -4,4 +4,20 @@
 .btn-border-color {
     border-color: white;
 } 
+.quiz-play-card{
+    display: flex;
+    flex-direction: column ;
+    box-shadow: 0px 2px 5px 1px var(--card-shadow);
+    border-radius : 5px;
+    background-color: var(--text-color);
+    width: 60%;
+}
+.quiz-score-div {
+    display: flex;
+    justify-content: space-between;
+}
 
+.quiz-next-btn {
+    display: flex;
+    justify-content: flex-end;
+}

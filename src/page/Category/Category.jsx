@@ -13,7 +13,8 @@ const getCategories = async (setCategories) => {
 
 
 export const Category = () => {
-    const [categories, setCategories] = useState([]);    
+    const [categories, setCategories] = useState([]);
+    
     useEffect(()=>{getCategories(setCategories)},[setCategories])
 
     return (
@@ -22,11 +23,11 @@ export const Category = () => {
             {categories.length > 0 && categories.map(({id,cateoryName,image,path})=>
                 <QuizCard key={id}
                     id={id}
-                    cateoryName={cateoryName}
+                    cateoryName={cateoryName.toUpperCase()}
                     description={"Test your Javascript Knowledge"}
                     caption={"Play Now"}
                     image={image}
-                    path={path}
+                    path={{pathname: path, state : {categoryId:cateoryName} }}
                  />
             )}
             </div>
