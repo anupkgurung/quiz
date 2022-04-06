@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route , Routes} from "react-router-dom";
-import { Home, Category, Rules , Quiz} from "../src/page";
+import { Home, Category, Rules , Quiz, Score} from "../src/page";
 import { Navbar} from "../src/component"
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/score" element={<Rules />} />
+          <Route path="/score" element={<Score />} />
         </Routes>
     </div>
   );

@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import {callCreateServer} from "./server"
+import { callCreateServer } from "./server";
+import { QuizProvider } from "./context"
 
- callCreateServer()
+callCreateServer()
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <QuizProvider>
+        <App />
+      </QuizProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { LinkButton, QuizCard } from "../../component";
-//import { useQuizContext } from "../../context";
 
 const getCategories = async (setCategories) => {
     try{
