@@ -1,5 +1,6 @@
 import { LinkButton } from "../../component";
 import "./Rules.css";
+import { useDocumentTitle } from "../../customHooks";
 
 const rules = [
     "Every category has 10 questions of multiple choice",
@@ -9,6 +10,7 @@ const rules = [
     "Click on Quit to leave the quiz",
 ];
 export const Rules = () => {
+    useDocumentTitle("Rules")
     return (
         <>
             <div className="m-2 pd-4 rule-container">

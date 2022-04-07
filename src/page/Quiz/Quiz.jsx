@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useQuizContext } from "../../context";
 import { LinkButton } from "../../component";
+import { useDocumentTitle } from "../../customHooks";
 
 const getQuestionByCategory = async (categoryId,setQuestionList) => {
     try{
@@ -14,6 +15,7 @@ const getQuestionByCategory = async (categoryId,setQuestionList) => {
 }
 
 export const Quiz = () => {
+    useDocumentTitle("Play Quiz");
     const { quizCategoryState : {score, currentQuestion, isCorrect, valueSelected } , dispatchQuizCategory } = useQuizContext();
     const {state : { categoryId }} =useLocation();
    

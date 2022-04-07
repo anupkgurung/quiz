@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { LinkButton, QuizCard } from "../../component";
+import { useDocumentTitle } from "../../customHooks";
 
 const getCategories = async (setCategories) => {
     try{
@@ -13,6 +14,7 @@ const getCategories = async (setCategories) => {
 
 
 export const Category = () => {
+    useDocumentTitle("Category")
     const [categories, setCategories] = useState([]);
     
     useEffect(()=>{getCategories(setCategories)},[setCategories])

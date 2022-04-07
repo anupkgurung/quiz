@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useQuizContext } from "../../context";
+import { useDocumentTitle } from "../../customHooks";
 
 const getQuestionByCategory = async (categoryId, setQuestionList) => {
     try {
@@ -12,6 +13,7 @@ const getQuestionByCategory = async (categoryId, setQuestionList) => {
 }
 
 export const Score = () => {
+    useDocumentTitle("Score")
     const [question, setQuestionList] = useState([]);
     const { quizCategoryState: { score, valueSelected, categoryId } } = useQuizContext();
 
