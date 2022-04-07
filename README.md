@@ -11,7 +11,8 @@ https://user-images.githubusercontent.com/31470135/162257472-fdb35c4c-8cc3-47d1-
 
 
 ## Links to Screen
-
+- [Login](https://kwiizy.vercel.app/login)
+- [Signup](https://kwiizy.vercel.app/signup)
 - [Home Page](https://kwiizy.vercel.app/)
 - [Rules](https://kwiizy.vercel.app/rules)
 - [Quiz Category](https://kwiizy.vercel.app/category)
